@@ -19,7 +19,7 @@ load_reg=pickle.load(open('SV_reg.pkl', 'rb'))
 df = pd.read_csv('Data_Pred.csv')
 st.write(df.iloc[:,1:].head())
 
-st.write("""# Model Perfromance""")
+st.write("""# Model Performance""")
 st.write(px.line(df[(df.index>0) & (df.index<100)],x='index',y=['Angle','SVR_Pred_Angle','LR_Pred_Angle','RF_Pred_Angle','SGD_Pred_Angle']))
 
 df = pd.read_excel('Data.xlsx')
